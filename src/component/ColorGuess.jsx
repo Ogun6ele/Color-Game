@@ -32,12 +32,12 @@ const ColorGuess = () => {
   const handleGuess = (color) => {
     if (color === mainColor) {
       setMessage('Correct!🎉🎉');
-      setScore(prevScore => prevScore + 1);
       setMessageClass('correct');
 
       setTimeout(() => {
         resetGame();
-      }, 2000);
+        setScore(prevScore => prevScore + 1);
+      }, 750);
     } else {
       setMessage('Try Again!👎👎');
       setMessageClass('wrong');

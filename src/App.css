@@ -7,7 +7,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f4;
-  padding: 7em;
+  padding: 2em 0;
   height: 100vh;
 }
 
@@ -30,8 +30,10 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid #0a0a0a;
+  border: 2px solid;
+  border-color: linear-gradient(to right, #f54747c7, #5507bb);
   border-radius: 1%;
+  background-color: #0a0a0a;
 }
 
 .score{
@@ -40,6 +42,7 @@ body{
   width: 100%;
   padding-left: 2em;
   font-weight: 700;
+  color: #f4f4f4;
 }
 
 .main-color{
@@ -63,12 +66,17 @@ body{
   border-radius: 10%;
 }
 
-.message.correct{
-  color: green;
+.message{
+  height: 2em;
+
 }
 
-.message.green{
-  color:red
+.message.correct{
+  color: #008000;
+}
+
+.message.wrong{
+  color: #f50808;
 }
 
 .new-game{
@@ -86,8 +94,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  gap: 1em
+  height: 100vh;
+  gap: 1em;
 }
 .dots .dot {
   height: 20px;
@@ -98,23 +106,31 @@ body{
 
 
 .dot:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.15s;
 }
 
 .dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dot:nth-child(3) {
   animation-delay: 0.3s;
 }
 
+.dot:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
 .dot:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: 0.6s;
 }
 
 .dot:nth-child(5) {
-  animation-delay: 0.5s;
+  animation-delay: 0.75s;
+}
+
+.dot:nth-child(6) {
+  animation-delay: 0.9s;
+}
+
+.dot:nth-child(7) {
+  animation-delay: 1.05s;
 }
 
 @keyframes jump {
